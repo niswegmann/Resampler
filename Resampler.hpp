@@ -9,26 +9,6 @@
 
 #include <utility>
 
-namespace resampler
-{
-
-template <int input_channel_count, int output_channel_count, typename Callback> static inline double process
-    (
-        float * const source_input_buffers [input_channel_count],
-        float * const source_output_buffers [output_channel_count],
-        float * const target_input_buffers [input_channel_count],
-        float * const target_output_buffers [output_channel_count],
-        int const source_sample_count,
-        Callback && callback,
-        double const source_sample_time,
-        double const target_sample_time,
-        float input_windows [input_channel_count][4],
-        float output_windows [output_channel_count][4],
-        double const phase
-    );
-
-} // namespace
-
 template <int input_channel_count, int output_channel_count> struct Resampler
 {
     Resampler (double source_sample_rate, double target_sample_rate)
