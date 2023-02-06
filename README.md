@@ -6,7 +6,7 @@ conversion with a fractional ratio.
 Here's and example of how to use it. Say we want to convert from 44.1 Hz to 48
 Hz in stereo.
 
-1. Create a `Resampler` instance with 2 input and 2 output channels and store it
+Start by creating a `Resampler` instance with 2 input and 2 output channels and store it
 somewhere.
 
     double const source_sample_rate = 44100, target_sample_rate = 48000;
